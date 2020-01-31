@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "870238977730",
+    "firebase_url": "https://workshopapp-d118b.firebaseio.com",
+    "project_id": "workshopapp-d118b",
+    "storage_bucket": "workshopapp-d118b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870238977730:android:c071f0c2c2d334193ec55b",
+        "android_client_info": {
+          "package_name": "com.myfirstreactnativeapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870238977730-hjde6ailvfa9jggq0n25u4tv6l1mgls5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr2rlK2_61RwDy7jB8L_1s9LOkt4bIq4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870238977730-hjde6ailvfa9jggq0n25u4tv6l1mgls5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
