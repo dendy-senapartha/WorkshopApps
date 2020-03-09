@@ -4,7 +4,7 @@ import { withTheme } from '../../theme';
 
 const StatusBar = ({ theme }) => (
   <RNStatusBar
-    backgroundColor={theme.background}
+    backgroundColor={theme.background}    
     barStyle={theme.key === 'dark' ? 'light-content' : 'dark-content'}
   />
 );

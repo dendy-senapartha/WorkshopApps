@@ -8,13 +8,13 @@ import {
   LoginView,
   TextInput,
 } from '../../components';
-/*
+
 import {
   login,
   changeEmail,
   resetFields,
   changePassword,
-} from '../actions/auth-actions';*/
+} from '../../actions/auth-actions';
 
 const Auth = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const Auth = ({ navigation }) => {
     errorMessage,
   } = useSelector(({ authReducer }) => authReducer);
 
-  //useEffect(() => () => dispatch(resetFields()), []);
+  useEffect(() => () => dispatch(resetFields()), []);
 
   return (
     <LoginView title="Welcome back.">
@@ -39,14 +39,14 @@ const Auth = ({ navigation }) => {
         <TextInput
           label="Email"
           value={email}
-          //onChangeText={text => dispatch(changeEmail(text))}
+          onChangeText={text => dispatch(changeEmail(text))}
           autoCapitalize="none"
           keyboardType="email-address"
         />
         <TextInput
           label="Password"
           value={password}
-          //onChangeText={text => dispatch(changePassword(text))}
+          onChangeText={text => dispatch(changePassword(text))}
           autoCorrect={false}
           autoCapitalize="none"
           secureTextEntry
@@ -59,7 +59,7 @@ const Auth = ({ navigation }) => {
           loading={loading}
           onPress={() => {
             Keyboard.dismiss();
-            //dispatch(login(navigation));
+            dispatch(login(navigation));
           }}
         />
         <View style={{ alignSelf: 'center' }}>

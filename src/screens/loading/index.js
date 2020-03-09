@@ -9,6 +9,7 @@ const LoadingScreen = ({ navigation: { navigate } }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    //checking session
     dispatch(initFirebase((isLogged) => {
       if (isLogged) {
         navigate('main');
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.white,
   },
   loadingContainer: {
     marginTop: 20,

@@ -8,6 +8,7 @@ import {
   AUTH_USER_LOGIN_FAILURE,
   AUTH_USER_LOGIN_SUCCESS,
   AUTH_USER_CHANGE_PASSWORD,
+  AUTH_USER_CHANGE_NAME
 } from './types';
 
 export const resetFields = () => ({ type: AUTH_RESET_FIELDS });
@@ -15,6 +16,13 @@ export const resetFields = () => ({ type: AUTH_RESET_FIELDS });
 export const setUser = user => ({ type: AUTH_SET_USER, payload: getUserMinified(user) });
 
 export const changeEmail = email => ({ type: AUTH_USER_CHANGE_EMAIL, payload: email });
+
+export const changeName = newName => (dispatch, getState) => {
+  const { authReducer } = getState();
+  const { user } = authReducer;
+  user.name = newName;  
+  dispatch({ type: AUTH_USER_CHANGE_NAME, payload: user });
+};
 
 export const changePassword = password => ({ type: AUTH_USER_CHANGE_PASSWORD, payload: password });
 
@@ -65,18 +73,22 @@ export const logout = ({ navigate }) => (dispatch) => {
   });
 };
 
-const getUserMinified = (user) => {
+export const getUserMinified = (user) => {
   const {
     uid,
     email,
     displayName: name,
+    phoneNumber,
+    photoURL,
     emailVerified: activated,
   } = user;
 
   return {
     uid,
-    name,
     email,
+    name,
+    phoneNumber,
+    photoURL,
     activated,
   };
 };

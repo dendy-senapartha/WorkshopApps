@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { Colors } from '../theme';
-import { Auth, Welcome} from '../screens';
+import { Auth, Welcome, Register } from '../screens';
 
 const stack = createStackNavigator({
   auth: Auth,
@@ -9,7 +9,7 @@ const stack = createStackNavigator({
     navigationOptions: {
       header: null,
     },
-  }//,  register: Register,
+  }, register: Register,
 }, {
   initialRouteName: 'welcome',
   defaultNavigationOptions: {
