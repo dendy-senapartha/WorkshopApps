@@ -9,17 +9,19 @@ import TextInput from './TextInput';
 import Icon from './Icon';
 import Toutchable from './toutchable';
 import UploadFile from './UploadFile';
+import LoadingOverlay from './LoadingOverlay';
 
-export {  
+export {
   Logo,
   Text,
-  Button,  
-  Container,  
+  Button,
+  Container,
   StatusBar,
   Loading,
   LoginView,
   TextInput,
   Icon,
   Toutchable,
-  UploadFile
+  UploadFile,
+  LoadingOverlay
 };

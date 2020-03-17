@@ -1,10 +1,10 @@
 import React from 'react';
 import { Image } from 'react-native';
-import tmdbLogo from '../../assets/wrkshop-smrg.png';
+import MainLogo from '~/assets/profile-default.png';
 
 const Logo = () => (
   <Image
-    source={tmdbLogo}
+    source={MainLogo}
     resizeMode="stretch"
     style={{ width: 140, height: 140 }}
   />

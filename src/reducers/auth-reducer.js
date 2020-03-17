@@ -11,7 +11,10 @@ import {
 } from '../actions/auth-actions/types';
 
 import {
-  CANCEL_UPDATE_PROFILE_USER
+  CANCEL_UPDATE_PROFILE_USER,
+  UPDATE_PROFILE_USER_FAIL,
+  UPDATE_PROFILE_USER_SUCCESS,
+  UPDATE_PROFILE_USER_START
 } from '../actions/profile-actions/types';
 
 import auth from '@react-native-firebase/auth';
@@ -29,12 +32,20 @@ const currentUser = auth().currentUser;
 export default (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
     case AUTH_USER_LOGIN:
+    case UPDATE_PROFILE_USER_START:
       return {
         ...state,
         loading: true,
         errorMessage: '',
       };
     case AUTH_USER_LOGIN_SUCCESS:
+    case UPDATE_PROFILE_USER_SUCCESS:
+      return {
+        ...INITIAL_STATE,
+        user: payload,
+        loading: false,
+      };
+    case UPDATE_PROFILE_USER_FAIL:
       return {
         ...INITIAL_STATE,
         user: payload,
@@ -73,6 +84,7 @@ export default (state = INITIAL_STATE, { type, payload }) => {
         ...INITIAL_STATE,
         user: payload,
       };
+
     default:
       return state;
   }

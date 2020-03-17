@@ -33,7 +33,7 @@ const Welcome = ({ navigation }) => {
         <View style={{ flex: 1 }}>
           <View style={welcomeContainer}>
             <View style={{ alignItems: 'center' }}>
-              <Text>Welcome to Workshop Semarang</Text>
+              <Text>Welcome to Workshop Apps</Text>
               <Text
                 extraLarge
                 color={Colors.darkGrey}
